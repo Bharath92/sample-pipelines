@@ -3,6 +3,11 @@ resources:
     type: qhode/GitRepo
     configuration:
       resourceFoo: 1
+  - name: bar
+    type: shippable/GitRepo
+    syntaxVersion: 1.0.0
+    configuration:
+      name: test
   - name: secondres
     type: shippable/sampleResource
     syntaxVersion: latest
@@ -32,7 +37,7 @@ pipelines:
         configuration:
           inputResources:
             - name: foo
-            - name: secondres
+            - name: bar
             - name: gitrepores
           foo: lol
         execution:
@@ -44,6 +49,8 @@ pipelines:
           inputSteps:
             - name: step1
           foo: test
+          inputResources:
+            - name: secondres
         execution:
           onSuccess:
             - node common/common.js
