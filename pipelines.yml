@@ -27,6 +27,8 @@ pipelines:
       - name: step0
         type: Bash
         configuration:
+          inputSteps:
+            - name: step0
           inputResources:
             - name: gitrepores
         execution:
