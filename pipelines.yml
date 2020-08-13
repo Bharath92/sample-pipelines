@@ -1,4 +1,8 @@
 resources:
+  - name: test
+    type: qhode/testRes
+    configuration:
+      test: 10
   - name: foo
     type: qhode/GitRepo
     configuration:
