@@ -2,7 +2,7 @@ resources:
   - name: test
     type: qhode/testRes
     configuration:
-      test: 11
+      test: 10
   - name: foo
     type: qhode/GitRepo
     configuration:
@@ -45,6 +45,7 @@ pipelines:
             - name: foo
             - name: bar
             - name: gitrepores
+            - name: test
           foo: lol
         execution:
           onStart:
